@@ -33,17 +33,11 @@ server..."). Danach antwortet er zügig.
 
 ## Wenn der Server ausfällt
 
-Zwei Rückfallebenen:
+Rückfallebene:
 
-1. `kurs_pyodide_backup.md` — dieselbe Dramaturgie, aber mit Pyodide im
-   Browser und eingebetteter HTML-Kopie der Seite. Braucht kein Netz und
-   keinen Server, liefert identische Ergebnisse. Nachteil: kein echter
-   Live-Abruf, und der Mehrseiten-Block (Schritt 4) zeigt dort nur die
-   Zählung statt drei real geladener Seiten.
-
-2. Eigener Server: `git clone https://github.com/LiaScript/CodeRunner`,
-   dann laut dessen README lokal starten und im Kurs-Header
-   `window.CodeRunner.init("ws://localhost:4000/")` setzen.
+Eigener Server: `git clone https://github.com/LiaScript/CodeRunner`,
+dann laut dessen README lokal starten und im Kurs-Header
+`window.CodeRunner.init("ws://localhost:4000/")` setzen.
 
 Hinweis: Im Template ist auch `wss://coderunner.informatik.tu-freiberg.de/`
 auskommentiert hinterlegt. Der war von außen nicht erreichbar — ggf. nur
