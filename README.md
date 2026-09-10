@@ -16,6 +16,10 @@ import:   https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.m
 
 **Kreativitätsgymnasium Leipzig | 10. September 2026**
 
+![Nahaufnahme eines Bildschirms mit laufendem Code](https://media.giphy.com/media/26tn33aiTi1jkl6H6/source.gif)<!--
+style="max-width: 45%; border-radius: 6px;"
+-->
+
 ---
 
 > Prof. Dr. Sebastian Zug, Johannes Kohl
