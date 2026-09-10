@@ -14,7 +14,7 @@ import:   https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.m
 
 # Kann das nicht die KI machen? 
 
-<h3>Oder: Warum sollte ich noch studieren</h3>
+<h3>Oder: Warum sollte ich noch studieren?</h3>
 
 **Kreativitätsgymnasium Leipzig | 10. September 2026**
 
@@ -98,21 +98,10 @@ Das sieht überzeugend aus: sinnvoll benannte Funktionen, sauber getrennt in
 Holen und Versenden, sogar eine Bedingung, die nur bei Treffern eine Mail
 schickt. Wer schon einmal Python gesehen hat, würde das durchwinken.
 
-                                    {{2}}
-Also ausprobieren. Und schon die allererste Zeile bringt das Programm zu Fall:
+                                    {{1}}
+Also ausprobieren. Und schon die allererste Zeile bringt das Programm zu Fall.
 
-                                    {{2}}
-``` text
-Traceback (most recent call last):
-  File "/tmp/tmp_47w66ol/main.py", line 1, in <module>
-    import requests
-ModuleNotFoundError: No module named 'requests'
-```
-
---{{2}}--
-Nicht Zeile 20, nicht der komplizierte Teil mit dem Datum - Zeile 1. Das
-Programm kommt nicht einmal bis zum ersten Befehl.
-
+                                    {{1}}
 <details>
 <summary>**Warum passiert das?**</summary>
 
@@ -134,16 +123,23 @@ Programme auf den nächsten Seiten.
 
 </details>
 
-                                    {{3}}
+--{{1}}--
+Nicht Zeile 20, nicht der komplizierte Teil mit dem Datum - Zeile 1. Das
+Programm kommt nicht einmal bis zum ersten Befehl.
+
+
+
+                                    {{2}}
 > **Frage:** Ist das jetzt ein Fehler der KI?
 
---{{3}}--
+--{{2}}--
 Nein - und das macht es interessant. Auf dem Rechner der meisten Entwickler
 wäre `requests` installiert, und der Code liefe. Der Fehler entsteht erst
 im Zusammentreffen mit **dieser** Umgebung.
 
-Wer Code übernimmt, übernimmt auch dessen Voraussetzungen. Sichtbar werden
-die erst, wenn sie fehlen.
+                                    {{2}}
+> [!CAUTION] 
+> Wer Code übernimmt, übernimmt auch dessen Voraussetzungen. Sichtbar werden die erst, wenn sie fehlen.
 
 
 ## Der (steinige) Weg 
@@ -195,7 +191,8 @@ Deshalb geht ein Profi anders vor - und zwar **bevor** die KI ins Spiel kommt:
    Datumsformat, Menge der Einträge?
 5. **Und dann** die KI anwerfen - jetzt kann man präzise beschreiben, was
    gebraucht wird, und beurteilen, was zurückkommt.
-
+6. **Testen, Testen, Testen** ...
+ 
 ## Frage 1: Was heißt eigentlich "Termin"?
 
 Bevor irgendjemand Code schreibt - auch keine KI - muss klar sein,
@@ -231,7 +228,6 @@ Um die Seite geht es:
 das, was der Browser tatsächlich bekommt und in die hübsche Ansicht
 übersetzt.
 
-                                    {{1}}
 Ein einzelner Artikel sieht im Quelltext so aus:
 
 ``` html
@@ -249,7 +245,6 @@ Ein einzelner Artikel sieht im Quelltext so aus:
 </div>
 ```
 
---{{1}}--
 Das ist echter Quelltext von der Seite, nur gekürzt. Jeder Artikel steckt in
 einem div mit der Klasse blog-item, der Titel in einem h2, das Datum in einem
 time-Tag.
@@ -316,6 +311,8 @@ print("Gefunden:", len(artikel), "Einträge")
 Scrollen Sie auf der Webseite ganz nach unten. Dort steht eine Zahl, die
 unser Programm nie beachtet hat.
 
+https://www.bip-schulen.de/nachrichten-gyl
+
 ### Lösung 3
 
                                     {{1}}
@@ -350,8 +347,9 @@ print("Ältester davon:", min(a.find("time")["datetime"][:10] for a in alle))
 @LIA.python
 
 --{{1}}--
-37 Unterseiten, also rund 592 Einträge. Unser erstes Programm hat 16 davon
-gesehen. Und schon drei Seiten reichen über ein Jahr zurück.
+37 Unterseiten. Bei 16 pro Seite sind das gut 580 Einträge - die letzte
+Seite dürfte nicht ganz voll sein. Unser erstes Programm hat 16 davon
+gesehen. Und schon drei Seiten reichen fast ein Jahr zurück.
 
 <details>
 <summary>**Wie kommt man an die anderen Seiten?**</summary>
@@ -515,8 +513,7 @@ dann die Frage, wo das Passwort sicher liegt, statt im Quelltext.
 
 ### Lösung 5
 
-Es kommen **21 identische Mails**. Mit unserem Filter sogar 21 leere.
-Ab Tag drei liest die niemand mehr.
+Es kommen **21 identische Mails**. Mit unserem Filter sogar 21 leere. Ab Tag drei liest die niemand mehr.
 
                                     {{1}}
 **Was fehlt dem Programm?**
@@ -539,7 +536,6 @@ Zwei Fehler haben sich sofort gemeldet: die fehlende Bibliothek und der
 erfundene Mailserver. Beide waren in Minuten behoben - laute Fehler sind
 die harmlosen.
 
-                                    {{1}}
 Die interessanten Fehler waren die anderen. Denn ansonsten hat die KI alles
 richtig gemacht:
 
@@ -547,35 +543,16 @@ richtig gemacht:
 - Er lief am Ende ohne Fehlermeldung durch
 - Er war sauber geschrieben
 
-                                    {{2}}
 Trotzdem war das Ergebnis unbrauchbar. Warum?
 
 | Was schiefging | Wer hätte es merken können? |
 | -------------- | ----------------------------- |
-| Nur 16 von 592 Einträgen | Nur wer die Seite anschaut |
+| Nur 16 von rund 580 Einträgen | Nur wer die Seite anschaut |
 | Termine gesucht, wo keine sind | Nur wer den Inhalt liest |
 | 21 gleiche Mails | Nur wer den Betrieb mitdenkt |
 
---{{2}}--
-In allen drei Zeilen steht dasselbe: Es braucht jemanden, der das Ergebnis
-beurteilen kann. Eine KI kann Code erzeugen. Ob er das richtige Problem
-löst, kann sie nicht wissen.
 
-                                    {{3}}
-> **Die Frage, um die es hier ging:**
->
-> Woher wusste ich, dass die Ausgabe falsch war?
-
---{{3}}--
-Nicht "kann die KI programmieren" - sie kann es, oft besser als ein
-Anfänger. Sondern: Wer merkt, dass "0 Termine" nicht "Fehler" bedeutet,
-sondern "falsche Annahme"?
-
-Ein Programm, das statt 592 nur 16 Einträge findet, wirft keine
-Fehlermeldung. Es gibt keinen roten Text. Es sieht aus wie Erfolg.
-
-<details>
-<summary>**Was heißt das für ein Informatikstudium?**</summary>
+**Was heißt das für ein Informatikstudium?**
 
 Ein verbreitetes Missverständnis: Im Studium lerne man Programmiersprachen.
 Syntax ist aber der kleinste Teil - und der, den eine KI zuverlässig
@@ -591,8 +568,6 @@ Der größere Teil ist das, was in dieser Stunde dreimal gefehlt hat:
 Das lässt sich nicht wegautomatisieren, weil es kein Übersetzungsproblem
 ist. Es ist ein Urteilsproblem: Man muss wissen, wie die Sache aussieht,
 wenn sie stimmt.
-
-</details>
 
 ## Ausblick
 
