@@ -10,6 +10,8 @@ comment:  Wir lassen eine KI ein Programm schreiben, das die Schul-Webseite
 import:   https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/KI_und_Informatik/main/README.md#1)
+
 # Kann das nicht die KI machen? 
 
 <h3>Oder: Warum sollte ich noch studieren</h3>
