@@ -602,3 +602,35 @@ im Kurs ändern und neu ausführen:
    und ob die genauso aufgebaut sind wie diese Nachrichten.
 
 ## Material und Kontaktdaten
+
+**Dieser Kurs zum Mitnehmen:**
+
+![QR-Code zum Kurs](bilder/qrcode-kurs.png)<!--
+style="max-width: 220px;"
+-->
+
+[liascript.github.io - Kurs öffnen](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/KI_und_Informatik/main/README.md)
+
+Der Quelltext liegt offen auf GitHub:
+[github.com/LiaPlayground/KI_und_Informatik](https://github.com/LiaPlayground/KI_und_Informatik)
+
+Alle Code-Blöcke lassen sich im Kurs direkt ändern und neu ausführen -
+probieren Sie die Aufgaben aus dem Ausblick gern selbst aus.
+
+---
+
+**Kontakt**
+
+Prof. Dr. Sebastian Zug
+[sebastian.zug@informatik.tu-freiberg.de](mailto:sebastian.zug@informatik.tu-freiberg.de)
+
+Johannes Kohl
+[johannes.kohl@informatik.tu-freiberg.de](mailto:johannes.kohl@informatik.tu-freiberg.de)
+
+Institut für Informatik
+**Technische Universität Bergakademie Freiberg**
+
+---
+
+Fragen zum Informatikstudium in Freiberg beantworten wir gern -
+auch nach dieser Stunde.
